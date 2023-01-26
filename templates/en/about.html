@@ -1,0 +1,328 @@
+{% extends 'en/main.html' %}
+{% load static %}
+
+{%block body%}
+
+<style>
+.sticky-element-placeholder.sticky-element-active {
+    width: 100% !important;
+}
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .main-div img {
+        width: 100%;
+    }
+
+    .main-div {
+        width: 100%;
+    }
+
+    .segundo-div {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    .tercer-div {
+       width: 100%;
+        background-color: whitesmoke;
+        margin-top: 20px;
+    }
+
+    .tercer-div .row{
+        width: 90%;
+      
+    }
+
+    .tercer-div img{
+        width: 150px;
+        filter: hue-rotate(120deg);
+    }
+
+    .tercer-div p{
+        text-align: center;
+        color: gray;
+    }
+
+    .desc{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .tercer-div hr{
+        width: 50px;
+    }
+
+    .segundo-div h1 {
+        margin-top: 35px;
+        color: darkblue;
+        text-align: center;
+    }
+
+    .segundo-div hr {
+        width: 50px;
+    }
+
+    .texto {
+        font-size: 25px;
+    }
+
+    .col-lg-8 p,li {
+        font-size: 20px;
+    }
+
+    .col-lg-4 img{
+        border-radius: 10px;
+    }
+
+
+    .maindiv2{
+        width: 100%;
+        
+    }
+
+    .maindiv2 img{
+        width: 100%;
+        margin-top: 35px;
+    }
+
+
+    .instalaciones{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .h1-instalaciones{
+        color: #024985;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .instalaciones hr{
+        width: 50px;
+    }
+
+    .instalaciones img{
+        width: 100%;
+        margin-top: 25px;
+        border-radius: 10px;
+    }
+</style>
+<div class="main-div">
+    <br>
+    <img src=" {%static 'img/about.png'%}  " alt="">
+
+
+    <div class="segundo-div">
+        <h1>
+            Third Level
+            <b>Health Center</b></h1>
+        <hr>
+
+        <div class="row">
+
+
+            <div class="col-lg-8" data-aos="fade-left" data-aos-duration="2000">
+                <p class="texto">
+                    <br>
+                    The IMG Hospital is a third level health center in the area of Bávaro, Punta Cana; It was built and equipped with high technology, according to international standards and current standards of the Ministry of Health of the Dominican Republic. IMG’s policy is to guarantee its national and international users optimal, efficient and timely medical attention.
+
+                    We have a bilingual, friendly and well trained staff, centralized in providing the best quality in health services. Our staff relies on an optimal infrastructure, equipped with high technology, which includes ample facilities available to patients and companions, with a capacity of 40 beds.
+                </p>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {%static 'img/frontal.png' %} " alt="">
+            </div>
+
+
+            <div class="col-lg-4" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {%static 'img/emergencias.png' %} " alt="">
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-left" data-aos-duration="2000">
+                <p>
+                    <b> Mission:</b> <br>
+                    To be the preferred medical center of the Caribbean, with emphasis on teaching and innovation and attention focused on patient service and safety.
+                </p>
+
+                <p><b>Visión:</b> <br>
+                    To be the group of international medical reference hospitals in the Latin American region, always at the forefront and achieving excellence in service to our patients and our allies.
+
+                </p>
+
+                <p>
+                    <b>Values:</b>
+                </p>
+
+                <li>
+                    Excellence
+                </li>
+
+                <li>
+                    Commitment
+                </li>
+
+                <li>
+                    Humanity
+                </li>
+
+                <li>
+                    Security
+                </li>
+
+
+                
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="tercer-div" style="width:100% ;">
+        <div class="container">
+        <div class="row">
+            
+
+            <div class="col-lg-4">
+                <p><img src= " {%static 'img/cheque.png' %}  " alt=""></p>
+
+                <p style="color: gray;"> 
+                    
+Vocation of service and humanity in the treatment of our patients and relatives.
+
+Passion and love for what we do.
+                </p>
+
+                <hr>
+
+            </div>
+
+
+            <div class="col-lg-4">
+                <p><img src= " {%static 'img/consultas.png' %}  " alt=""></p>
+
+                <p  style="color: gray;">
+                    
+Excellence and Responsibility in what to do and in the service we provide.
+
+Integrity and Reliability in our actions.        
+                </p>
+            
+                <hr>
+            </div>
+
+            <div class="col-lg-4">
+                <p><img src="  {% static 'img/latido-del-corazon.png' %}" alt=""></p>
+
+                <p  style="color: gray;">
+                    
+Respect for our customers, shareholders, employees, environment and community.
+
+Innovation, always looking for new and better ways to serve.                    
+                </p>
+
+                <hr>
+            </div>
+            
+
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+<div class="maindiv2">
+
+    <hr>
+<h2 class="desc">
+  
+Our experienced team of physicians and surgeons allows us to offer national´s and international´s  patients unparalleled services and attention to the different medical specialties at IMG hospital:
+</h2>
+
+    <img src=" {%static 'img/especialitis.png' %}  " alt="">
+</div>
+
+<div class="instalaciones">
+    <h1 class="h1-instalaciones">
+        Our Facilities
+    </h1>
+
+    <div class="row">
+
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/1.jpg' %}  " alt="">
+        </div>
+
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/2.jpg' %}  " alt="">
+        </div>
+
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/3.jpg' %}  " alt="">
+        </div>
+
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/4.jpg' %}  " alt="">
+        </div>
+
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/5.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/6.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/7.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/8.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/9.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/10.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/11.jpg' %}  " alt="">
+        </div>
+
+        
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="2000">
+            <img src=" {%static 'img/12.jpg' %}  " alt="">
+        </div>
+
+    </div>
+    <hr>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+{%endblock%}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+<style>
+    .balon,
+    .balon img {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .mainball{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .mainball img{
+        width: 100%;
+    }
+
+    .mainball p{
+        color: gray;
+        margin-top: 25px;
+    }
+</style>
+
+<div class="balon">
+<img src="{% static 'img/balonb.png' %}  " alt="">
+</div>
+
+<div class="mainball">
+    <p>
+        <b>
+            En Hospital IMG contamos con tecnología de última generación y un equipo de profesionales especializados en
+            los servicios médicos que brindamos. Nuestros pacientes son nuestra razón de existencia, por lo tanto, le
+            dedicamos nuestra total atención y cuidados.
+        </b>
+    </p>
+
+    <p>
+        <b>
+            El balón gástrico, también denominado como balón intragástrico, es una esfera de silicona flexible y blanda,
+            que se introduce en el estómago del paciente, mediante una endoscopia, con el fin de conseguir la reducción
+            de peso en personas con obesidad mórbida. Su introducción es un procedimiento de cirugía bariátrica de tipo
+            restrictivo, pues su enfoque principal es el de generar una sensación de plenitud o de saciedad precoz para
+            que la persona reduzca el consumo de alimentos, lo cual facilita el proceso de adelgazar.
+        </b>
+    </p>
+
+
+    <p>
+        <b>
+            El balón gástrico está desarrollado especialmente para no deteriorarse con la acidez del estómago, presenta
+            una válvula de silicona que se cierra automáticamente cuando el balón está lleno y es un producto de uso
+            temporal, que exige un compromiso por parte del paciente en reeducar su comportamiento, con el propósito de
+            reducir el peso durante el uso del producto y mantener esta pérdida por un periodo prolongado, una vez
+            retirado el dispositivo.
+        </b>
+    </p>
+
+    <p>
+        <b>
+            El tratamiento con balón gástrico se debe acompañar de un grupo multidisciplinario de especialistas que
+            apoyen al paciente durante los 6 meses del tratamiento, con el fin de ayudarlo a recuperar un peso adecuado,
+            unos buenos hábitos alimenticios y la actividad física. Estos grupos están generalmente integrados por un
+            nutricionista, psiquiatra, psicólogo, endocrinólogo y médico endoscopista.
+        </b>
+    </p>
+
+    <p>
+        <b>
+            Los pacientes que se someten a este método en su gran mayoría no sólo han perdido peso significativamente,
+            sino que recuperan un estilo de vida saludable.
+        </b>
+    </p>
+
+
+    <img src=" {%static 'img/balon.jpg' %}  " alt="">
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+{%endblock%}

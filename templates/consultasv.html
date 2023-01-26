@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+<style>
+    .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.azules {
+    background-color: #024985;
+    font-size: 50px;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.azules img{
+    width: 60px;
+    color: #96A504;
+    
+    filter: invert(10);
+}
+
+.verdes img{
+    width: 60px;
+    filter: invert(10);
+}
+
+.contenedor hr{
+    width: 50px;
+    text-align: left;
+}
+
+.verdes{
+    font-size: 50px;
+    background-color:#96A504 ;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.centrado{
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-20%, -80%);
+}  
+
+.card{
+    margin-top: 50px;
+    padding: 10px;
+  box-shadow: 5px 10px #888888;
+  border-radius: 15px;
+}
+
+.verdea{
+    text-align: center;
+    color:#819D4C ;
+}
+
+
+</style>
+
+<div class="village">
+    <img src=" {% static 'img/village.png' %} " alt="">
+</div>
+
+<div class="main-village">
+    <div class="container card">
+        <div class="row">
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/pediatrav.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/pediatria.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Pediatria</b></p>
+                <hr>
+               
+            </div>
+
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/ginecologiav.jpg' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/consultas.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Consultas Medicas</b></p>
+                <hr>
+            </div>
+
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/familiarv.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/doctor.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Consultas Medicas</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/cardiov.png' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/latido-del-corazon.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Cardiologia</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/otorrinov.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/oido.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Otorrino</b></p>
+                <hr>
+            </div>
+
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/cirugiav.jpg' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/cirugia.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Cirugia</b></p>
+                <hr>
+            </div>
+
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/ortopedav.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/rodilla.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Ortopedia</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/gastrov.jpg' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/estomago.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Cirugia</b></p>
+                <hr>
+            </div>
+
+            
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/monitoreov.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/holter.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Monitoreo de Presión Arterial</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/nutricionv.jpg' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/alimentacion-saludable.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Nutricionista</b></p>
+                <hr>
+            </div>
+
+            
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/neumov.jpg' %} " alt="" width="80%">
+                <p class="centrado verdes"> <img src=" {% static 'img/neumologia.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Neumologia</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/hematologia.jpg' %} " alt="" width="80%">
+                <p class="centrado azules"> <img src=" {% static 'img/blood-donor.png' %} " alt=""> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Hematología</b></p>
+                <hr>
+            </div>
+
+
+
+            
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+            <div class="col-lg-8" hidden>
+                <p class="verdea"><b>Lunes – Viernes</b></p>
+                <p class="verdea"> <b>8:00 AM – 5:00 PM</b></p>
+
+                <p class="verdea"> <b>Sabados</b></p>
+                <p class="verdea"><b>8:00 AM – 12:00 PM</b> </p>
+            </div>
+           
+
+
+
+          
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{%endblock%}

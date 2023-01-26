@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+
+<style>
+    .village img{
+        width: 100%;
+    }
+
+    .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.centrado{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-20%, -80%);
+}  
+.verdes{
+    font-size: 50px;
+    background-color:#96A504 ;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.azules {
+    background-color: #024985;
+    font-size: 50px;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.azules img{
+    width: 60px;
+    color: #96A504;
+    
+    filter: invert(10);
+}
+
+.verdes img{
+    width: 60px;
+    filter: invert(10);
+}
+
+.contenedor hr{
+    width: 40px;
+}
+
+.contenedor img{
+    border-radius: 15px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.card{
+    margin-top: 50px;
+    padding: 10px;
+  box-shadow: 5px 10px #888888;
+  border-radius: 15px;
+}
+</style>
+
+<div class="village">
+    <img src=" {% static 'img/village.png' %} " alt="">
+</div>
+
+<div class="main-village">
+    <div class="container card">
+        <div class="row">
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/urgencias.jpg' %} " alt="">
+                <p class="centrado verdes"> <a href=" {%url 'urgencias'%} ">
+                    <img src=" {% static 'img/urgencias.png' %} " alt="">
+                </a> </p>
+                <br> <br>
+                <p style="color: gray;"><b>Servicios de Urgencias</b></p>
+                <hr>
+                
+            </div>
+            
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/consultav.png' %} " alt="">
+                <p class="centrado azules"> <a href=" {%url 'consultasv'%} "><img src=" {% static 'img/doctor.png' %} " alt=""></a></p>
+                <br> <br>
+                <p style="color: gray;"><b>Consultas Medicas</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-4 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/sonografia.jpg' %} " alt="">
+                <p class="centrado verdes"><a href=" {%url 'sonografia'%} "><img src=" {% static 'img/sonografia.png' %} " alt=""></a></p>
+                <br> <br>
+                <p style="color: gray;"><b>Sonografia</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-6 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/laboratorio.jpg' %} " alt="" width="100%">
+                <p class="centrado azules"> <img src=" {% static 'img/microscopio.png' %} " alt=""></p>
+                <br> <br>
+                <p style="color: gray;"><b>Laboratorio</b></p>
+                <hr>
+            </div>
+
+            <div class="col-lg-6 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src=" {% static 'img/dental.jpg' %} " alt="" width="100%">
+                <p class="centrado verdes"><img src=" {% static 'img/diente.png' %} " alt="" ></p>
+                <br> <br>
+                <p style="color: gray;"><b>Clinica Dental</b></p>
+                <hr>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{%endblock%}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+<style>
+    h1{
+        color: #024985;
+    }
+
+    .col-lg-3,.col-lg-9{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .img-con{
+        width: 100%;
+    }
+
+    .verdes{
+    font-size: 50px;
+    background-color:#96A504 ;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.linea{
+    text-align: center;
+    margin: 25px;
+    color: gray;
+}
+
+p b{
+    text-align: center;
+}
+
+.form-control {
+    background-color: whitesmoke;
+}
+
+.btn{
+    background-color: #024985;
+    color: white;
+    width: 80px;
+}
+
+.contacto, .contacto img{
+    width: 100%;
+}
+</style>
+
+<div class="contacto">
+    <br><br>
+    <img src=" {% static 'img/conta.png' %}  " alt="">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <h1>
+                Envienos <br>
+                <b>sus comentarios</b>
+            </h1>
+            <hr>
+            <form action="" method="post">
+                {% csrf_token %} 
+                {{contacto}}
+<br>
+            <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+        <div class="col-lg-3">
+            <img src=" {%static 'img/contacto.jpg'%} " alt="" class="img-con">
+
+
+            <p class="linea"> <i class="fa-solid fa-phone verdes"></i></p>
+            <p class="linea"><b>+1 (809) 285-6116</b></p>
+
+
+            <p class="linea"> <i class="fa-solid fa-envelope verdes"></i></p>
+            <p class="linea"><b>info@img.hospital</b></p>
+
+            <p class="linea"> <i class="fa-solid fa-location-dot verdes"></i></p>
+            <p class="linea"><b>Boulevard Turístico del Este Esq. Cocotal, Punta Cana, República Dominicana.</b></p>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+{%endblock%}
+

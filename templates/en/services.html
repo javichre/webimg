@@ -1,0 +1,280 @@
+{% extends 'en/main.html' %}
+{% load static %}
+
+{%block body%}
+
+<style>
+    .linea{
+        width: 50px;
+        margin-left:0;
+        color: green;
+    }
+
+.imagenes img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.imagenes{
+
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+.imagenes .col-lg-3{
+    margin-top: 35px;
+}
+
+.servicios img{
+    width: 100%;
+}
+.centrado{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-20%, -80%);
+}  
+
+.verdes{
+    font-size: 50px;
+    background-color:#96A504 ;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.verdes p i{
+    color: aqua;
+}
+
+.verdes:hover{
+    
+    background-color: #024985;
+}
+
+.azules {
+    background-color: #024985;
+    font-size: 50px;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.azules:hover{
+    background-color: #96A504;
+}
+
+i:hover{
+    color: whitesmoke;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.azules img{
+    width: 60px;
+    color: #96A504;
+    
+    filter: invert(10);
+}
+
+.verdes img{
+    width: 60px;
+    filter: invert(10);
+}
+
+.contenedor hr{
+    width: 50px;
+    text-align: left;
+}
+</style>
+
+
+
+
+
+
+
+<div class="servicios">
+
+    <img src="  {% static 'img/service.png' %}" alt="">
+
+    <div class=" imagenes">
+        <div class="row">
+
+            <div class="col-lg-3 contenedor" data-aos="fade-left" data-aos-duration="2000">
+                <img src="  {% static 'img/ambulancia.png' %}" alt="">
+                <p class="centrado verdes"> <img src="  {% static 'img/ambulance.png' %}" alt=""></p>
+
+               <br><br><br><br>
+                <span>Ambulance 24/7</span>
+                <hr>
+              
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/plastic.png' %}" alt="" data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/plastica.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Plastic Surgery</span>
+                <hr>
+
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/baritarica.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/body.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Bariatric Surgery</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/cirugiageneral.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/cirugia.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>General Surgery</span>
+                <hr>
+            </div>
+
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/diagnosticai.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/imagene.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                 <span>Diagnóstic Imaging</span>
+                 <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/dentalc.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/diente.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Dental Clinic</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/checup.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/doctor.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                 <span>Check-up Program</span>
+                 <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/dialisis.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/dialisi.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Dialysis Club</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/emergencia.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/emergency.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Emergency</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/uci.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/intensive.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Intensive Care Unit</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/ucin.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/newborn2.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Neonatal UCI</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/consulta.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/consultas.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Medical Consultation</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/housecal.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/enfermera.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>
+                    House Call 24/7</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/laboratorio.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/microscopio.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Laboratory</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/hospitalizacion.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado verdes"> <img src="  {% static 'img/cama-de-hospital.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>
+                    Hospitalization</span>
+                <hr>
+            </div>
+
+            <div class="col-lg-3 contenedor">
+                <img src="  {% static 'img/rehabilitacion.png' %}" alt=""data-aos="fade-left" data-aos-duration="2000">
+                <p class="centrado azules"> <img src="  {% static 'img/terapia-fisica.png' %}" alt=""></p>
+
+                <br><br><br><br>
+                <span>Rehabilitation / Physiatry</span>
+                <hr>
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+   
+
+    
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+{%endblock%}

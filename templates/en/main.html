@@ -1,0 +1,326 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript"
+    src="https://lab.cardnet.com.do/servicios/tokens/v1/Scripts/PWCheckout.js?key=mfH9CqiAFjFQh_gQR_1TQG_I56ONV7HQ">
+</script>
+      <!-- reference your installed Font Awesome Free package's files here -->
+      <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+      <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+      <link rel="icon" href=" {% static 'img/iso.png' %}  ">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    {%block css%}
+
+    {%endblock%}
+
+    {%block js%}
+
+    {%endblock%}
+
+    
+     {%block titulo%}
+    <title>Hospital IMG!</title>
+
+    {%endblock%}
+  </head>
+   
+  <body>
+
+
+
+    {%block baner%}
+    <style>
+        .baner{
+            background-color: #024985;
+            width: 100%;
+        }
+
+        .baner h2{
+            padding-top: 2%;
+            padding-bottom: 2%;
+            color: white;
+            text-align: center;
+        }
+
+        .banner-a{
+          color: white;
+          font-size: 25px;
+        }
+
+        .banner-a:hover{
+          color: white;
+        }
+    </style>
+    <div class="baner">
+
+      <h2><a href=" {%url 'village'%} " class="banner-a">New Brach Puntacana Village!</a></h2>
+
+        
+    </div>
+    {%endblock%}
+
+
+    {%block redes%}
+
+   <style>
+    .redes{
+        margin-top: 30px;
+        width: 100%;
+        margin-right: 0;
+    }
+   </style>
+    <style>
+     
+
+        @media only screen and (max-width: 600px) {
+  i {
+    background-color: red;
+  }
+}
+    </style>
+    <div class="row redes">
+        <div class="col-lg-7"></div>
+        <div class="col-lg-3">
+            <div class="row">
+
+               
+
+                <div class="col-2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <div class="col-2  col-md-2">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="col-2">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                
+                <div class="col-2">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+                <div class="col-2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="col-2" >
+                    <div class="dropdown">
+                      <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Idioma
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item"  href=" {%url 'home'%}  "><b>English </b></a>
+                        <a class="dropdown-item"  href=" {%url 'inicio'%}"><b>Español </b> </a>
+                      
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    {%endblock%}
+
+
+<hr>
+
+
+
+   {% block header %}
+
+   <style>
+    a{
+      font-size: 15px;
+    }
+
+ 
+   </style>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+      <a class="navbar-brand" href=" {%url 'home'%}  "> <img src=" {% static 'img/logoimg.png' %}  " alt="" width="350px" style="border-radius: 15px;"> </a>
+
+      <ul class="navbar-nav ml-auto ">
+
+       
+        <a class="nav-link" href=" {%url 'home'%} "> <i class="fa-solid fa-house"></i> <b>Home </b>  </a>
+       
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href=" {%url 'about'%} "><i class="fa-solid fa-users"></i> <b>About ut </b>  </a>
+        </li>
+    
+
+        <li class="nav-item">
+          <a class="nav-link" href=" {%url 'services'%} "><i class="fa-solid fa-gear"></i><b>Services </b> </a>
+        </li>
+       
+      
+
+      
+      
+        
+     
+       
+        <li class="nav-item">
+          <a class="nav-link" href=" {%url 'directory'%}  "><i class="fa-solid fa-user-doctor"></i><b>Medical Directory </b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{%url  'lnoticias'%} "><i class="fa-solid fa-newspaper"></i><b>News </b></a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link" href="  {%url  'testimonials'%} "><i class="fa-solid fa-user"></i><b>Testimonials </b> </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href=" {% url 'contact' %} "><i class="fa-solid fa-phone"></i><b>Contact </b></a>
+          </li>
+
+          <li class="nav-item" hidden>
+            <a class="nav-link" href="   "><b>Punta Cana Village </b>  <i class="fa-solid fa-right-to-bracket"></i></a>
+          </li>
+
+        
+
+    
+      </ul>
+      
+    </div>
+  </nav>
+   {%endblock%}
+
+      {% block body %}
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
+  {% endblock %}
+
+
+
+  {%block footer%}
+  <style>
+    .footter{
+      margin-top: 50px;
+      padding-top: 30px;
+      width: 100%;
+    }
+
+    .containers{
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      
+    }
+
+    .fredes p {
+      text-align: center;
+      color: whitesmoke;
+      font-size: 20px;
+    }
+.fredes i{
+  color: gray;
+}
+
+.iconos{
+  background-color: gray;
+  border-radius: 100px;
+  width: 30px;
+  color: gray;
+}
+
+.col-lg-8 h5, .col-lg-4 p{
+  color: white;
+  text-align: center;
+}
+
+.telefono{
+  text-align: center;
+  color: #96A504;
+}
+
+
+
+  </style>
+<div class="baner footter">
+  <div class="containers">
+<div class="row ">
+ 
+
+<div class="col-lg-8">
+  <img src=" {% static 'img/logoblanco.png' %}  " alt="">
+</div>
+
+<div class="col-lg-3 fredes">
+  <p>Visít our Social Media</p>
+
+  <div class="row">
+
+    <div class="col-3">
+      <p class="iconos"><i class="fa-brands fa-facebook-f"></i></p>
+  </div>
+
+  <div class="col-3">
+      <p class="iconos"><i class="fa-brands fa-instagram"></i></p>
+  </div>
+
+  <div class="col-3">
+      <p class="iconos"><i class="fa-brands fa-linkedin-in"></i></p>
+  </div>
+
+  
+  <div class="col-3">
+      <p class="iconos"><i class="fa-brands fa-youtube"></i></p>
+  </div>
+  </div>
+</div>
+
+
+</div>
+<hr>
+
+
+<div class="row">
+  <div class="col-lg-8">
+    <h5>The IMG Hospital is a third-level private hospital in the area of Bávaro, Punta Cana.</h4>
+  </div>
+  
+  <div class="col-lg-4 telefono">
+  <h4>+1 809 285 6116</h4>
+
+  <p>Available 24/7</p>
+  </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+  {% endblock %}

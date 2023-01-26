@@ -1,0 +1,527 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{%block body%}
+
+<style>
+
+    h2{
+        color: gray;
+    }
+
+    .main{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .main img{
+width: 100%;
+    }
+
+    .card{
+       
+        color: white;
+        text-align: center;
+    }
+
+    .contenedor img{
+        width: 100%;
+    }
+
+    .azul{
+        background-color: #1E3366;
+    }
+
+    .azul h2{
+        color: whitesmoke;
+    }
+
+    hr{
+      
+        background-color: #96A504;;
+        width: 40px;
+    }
+
+    .centrado{
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translate(-30%, -70%);
+    width: 80px;
+}  
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.verdes{
+    font-size: 50px;
+    background-color:#96A504 ;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+.verdes img{
+    filter: invert(10);
+}
+body{
+    background-color: whitesmoke;
+}
+.doctores{
+    margin-top: 50px;
+}
+</style>
+
+<div class=" main">
+
+    <img src= " {% static 'img/staffmedico.png'%} " alt="">
+</div>
+
+<div class="container doctores card">
+
+
+    <div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <h2> Departamento de Anestesiología </h2>
+        <hr>
+        <br>
+    </div>
+{% for i in anesteciologos %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000"> 
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/cama.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Cardiología </h2>
+        <hr>
+        <br>
+    </div>
+{% for i in cardiologos %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/latido-del-corazon.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Cirugía </h2>
+        <hr>
+        <br>
+    </div>
+{% for i in cirujanos %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/cirugia.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Diabetología y Nutrición </h2>
+        <hr>
+        <br>
+    </div>
+{% for i in nutriologos %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/alimentacion-saludable.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Gastroenterología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in gastro %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/estomago.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Endocrinología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in endocrinología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/tiroides.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Ginecología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in ginecologia %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/utero.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Medicina Interna</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in internistas %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/cuerpo-humano.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Oftalmología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in oftalmología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/ojo.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Otorrinolaringología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in otorrinolaringología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/otorrinolaringologia.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Pediatría</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in pediatria %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/pediatria.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Psicología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in psicología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/autismo.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Radiología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in radiología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/imagene.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de  Ortopedia y Fisiatría</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in ortopedia %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/rodilla.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Fisiatría</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in fisiatría %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/terapia-fisica.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+<div class="row">
+    <div class="col-lg-12" style="text-align: center;">
+        <br>
+        <h2> Departamento de Urología</h2>
+        <hr>
+        <br>
+    </div>
+{% for i in urología %}
+<div class="col-lg-3"  data-aos="fade-left" data-aos-duration="2000">
+    <div class="card ">
+        <div class="contenedor">
+            <img src=" {{i.imagen.url}}  " alt="">
+            <p class="centrado verdes"> <img src="  {% static 'img/urologia.png' %}" alt=""></p>
+        </div>
+       <div class="azul">
+        <br>
+        <p class="card-text"> {{i.especialidad}} </p>
+        <h2> {{i.sexo}} {{i.nombres}}  </h2>
+        <hr>
+       </div>
+    </div>
+</div>
+{%endfor%}
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{%endblock%}
