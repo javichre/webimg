@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'web.urls'
+ROOT_URLCONF = 'pagina.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'web.wsgi.application'
+WSGI_APPLICATION = 'pagina.wsgi.application'
 
 
 # Database
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd547n5baod79hs',
+        'USER': 'mtvqsdbaogqueq',
+        'PASSWORD': '206e2560ed898a01167715a8b4a03949aadc854af6639254b971902bdee806f0',
+        'HOST': 'ec2-34-207-12-160.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
