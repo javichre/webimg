@@ -28,6 +28,9 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 
+RECAPTCHA_PUBLIC_KEY = '6LdhYo0kAAAAAD2eALoYsQADM_NuyQsAVo3y2yiX'
+RECAPTCHA_PRIVATE_KEY = '6LdhYo0kAAAAAJEIMkNy1NUhIfw56OY70hEf4flY'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'testimonios',
     'noticias',
     'fontawesomefree',
+    'captcha',
 ]
 
 MIDDLEWARE = [

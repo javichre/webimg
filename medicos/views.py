@@ -4,6 +4,8 @@ from email import message
 from django.contrib import messages
 from django.views.generic import TemplateView,View,CreateView,ListView,UpdateView,DeleteView
 from django.urls import reverse_lazy
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Checkbox
 from .forms import *
 from .models import *
 
@@ -24,6 +26,7 @@ def Ini(request):
 
 def Contactos(request):
     if request.method == 'POST':
+        captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
         contacto =  ContactoForm(request.POST)
         if contacto.is_valid():
             contacto.save()
