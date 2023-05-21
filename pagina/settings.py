@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s-6+h6eb%!203uywyu^5@pcz-4$mp^^1s3014jksnjwml87q#r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+SECURE_SSL_REDIRECT = True
 
 RECAPTCHA_PUBLIC_KEY = '6LdhYo0kAAAAAD2eALoYsQADM_NuyQsAVo3y2yiX'
 RECAPTCHA_PRIVATE_KEY = '6LdhYo0kAAAAAJEIMkNy1NUhIfw56OY70hEf4flY'
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'testimonios',
     'noticias',
     'fontawesomefree',
-    'captcha',
+    #'captcha',
 ]
 
 MIDDLEWARE = [
@@ -85,14 +85,11 @@ WSGI_APPLICATION = 'pagina.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd547n5baod79hs',
-        'USER': 'mtvqsdbaogqueq',
-        'PASSWORD': '206e2560ed898a01167715a8b4a03949aadc854af6639254b971902bdee806f0',
-        'HOST': 'ec2-34-207-12-160.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation

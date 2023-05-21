@@ -16,10 +16,19 @@ class Especialidad(models.Model):
     def __str__(self):
         return self.especialidad
 
+class Sucursal(models.Model):
+    id = models.AutoField(primary_key=True)
+    sucursal = models.CharField(max_length=100, blank=False,null=False)
+
+    def __str__(self):
+        return self.sucursal
+
 class Medico(models.Model):
     id = models.AutoField(primary_key=True)
     imagen = models.ImageField('Imagen de Perfil',upload_to="doctores/", null= False,blank = False)
     especialidad = models.ForeignKey(Especialidad,on_delete=models.CASCADE)
+    sub_especialidad  = models.CharField(max_length=100, null=False,blank=False)
+    sucursal = models.ForeignKey(Sucursal,on_delete=models.CASCADE,default=1)
     sexo =  models.ForeignKey(Sexo,on_delete=models.CASCADE)
     nombres  = models.CharField(max_length=100, null=False,blank=False)
 

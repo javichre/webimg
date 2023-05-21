@@ -11,4 +11,5 @@ admin.site.register(Correo)
 admin.site.register(Contacto)
 admin.site.register(Portada)
 admin.site.register(Seguros)
+admin.site.register(Sucursal)
 # Register your models here.
