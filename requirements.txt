@@ -19,13 +19,13 @@ cryptography==39.0.2
 cssselect2==0.7.0
 cycler==0.11.0
 distlib==0.3.6
-Django==3.0.6
+Django==2.1.11
 
 django-decouple==2.1
 django-enumfield==3.1
 django-fontawesome-5==1.0.18
-django-phone-field==1.8.1
-django-storages==1.13.2
+
+
 django-widget-tweaks==1.4.12
 djangorestframework==3.14.0
 easydev==0.12.1
